@@ -51,22 +51,23 @@ h3 {
 .pembayaran-group {
     display: flex;
     align-items: center;
-    margin-bottom: 8px
+    margin-bottom: 8px;
+    justify-content: space-between;
 }
 
 .pembayaran-group label {
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 .pembayaran-group input[type="radio"] {
-    margin-right: 5px; 
+    margin-right: 10px; 
 }
 
 button {
     display: flex;           
     align-items: center; 
     height: 30px;
-    width: 50px;
+    width: 48px;
     margin: 0 10px;        
     border-radius: 5px;   
     cursor: pointer
@@ -100,6 +101,7 @@ select {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
+    flex: 1;
 }
 
 .menu-topokki label {
@@ -155,7 +157,6 @@ select {
     <textarea id="Alamat_Pembeli" name="Alamat_Pembeli" placeholder="Alamat Kamu"></textarea>
     <br>
 
-
     <label>Kode Pos : </label> 
     <br>
     <input type="text" list="Kode_Pos" placeholder="Kode Pos Kamu">
@@ -195,7 +196,7 @@ select {
     </div>
     
 
-    <label for="metode_pembayaran">Metode Pembayaran</label>
+    <label for="metode_pembayaran">Metode Pembayaran : </label>
     <select id="metode_pembayaran">
         <option value="Pilih">Pilih</option>
         <option value="Tunai">Tunai</option>
