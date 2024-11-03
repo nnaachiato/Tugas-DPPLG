@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasywa Alifia (26) X-PPLG 2</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(Topokki.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+hr {
+    border-top: 2px dashed;
+}
+
+.container {
+    background-color: rgba(219, 225, 225, 0.404);
+    filter: opacity(90%);
+    padding: 10px;
+    border-radius: 8px;
+    border-style: dashed;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+.button-container {
+    display: flex;            
+    justify-content: center;  
+    align-items: center;      
+    margin-top: 5px;
+}
+
+.pembayaran-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    justify-content: space-between;
+}
+
+.pembayaran-group label {
+    margin-right: 5px;
+}
+
+.pembayaran-group input[type="radio"] {
+    margin-right: 10px; 
+}
+
+button {
+    display: flex;           
+    align-items: center; 
+    height: 30px;
+    width: 48px;
+    margin: 0 10px;        
+    border-radius: 5px;   
+    cursor: pointer
+    border: 1px solid;
+}
+
+button:hover {
+    background-color: #0ece2a;
+}
+
+label, 
+textarea, 
+select, 
+#Tanggal_Beli {
+    width: 100%;
+}
+
+input[type="text"], 
+input[type="date"], 
+input[type="number"],
+textarea, 
+select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.menu-topokki {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    flex: 1;
+}
+
+.menu-topokki label {
+    width: 55%;
+    font-size: 14px;
+}
+
+.menu-topokki input[type="number"] {
+    width: 100%;
+    margin-left: 5px;
+    padding: 5px; 
+}
+
+@media (max-width: 600px) {
+    .nota {
+        padding: 10px;
+    }
+
+    label, h3 {
+        font-size: 14px;
+    }
+
+    .menu-topokki label {
+        width: 55%;
+    }
+
+    .menu-topokki input[type="number"] {
+        width: 100%;
+    }
+}
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h3>NOTA PEMBELIAN TOPOKKI</h3>
+    </header>
+    <hr>
+
+    <form>
+    <label>Nama : </label>
+    <br>
+    <input type="Text" id="Nama_Kamu" name="#Nama_Kamu"
+    placeholder="Nama Kamu">
+    <br>
+    
+
+    <label>Alamat : </label>
+    <br>
+    <textarea id="Alamat_Pembeli" name="Alamat_Pembeli" placeholder="Alamat Kamu"></textarea>
+    <br>
+
+    <label>Kode Pos : </label> 
+    <br>
+    <input type="text" list="Kode_Pos" placeholder="Kode Pos Kamu">
+    <datalist id="Kode_Pos">
+        <option value="45777">45777</option>
+        <option value="50111">50111</option>
+        <option value="50112">50112</option>
+        <option value="50114">50114</option>
+        <option value="50115">50115</option>
+        <option value="50117">50117</option>
+        <option value="50122">50122</option>
+        <option value="50123">50123</option>
+        <option value="50124">50124</option>
+        <option value="50126">50126</option>
+        <option value="50128">50128</option>
+    </datalist>
+    <br>
+
+    
+    <label>Tanggal Beli : </label>
+    <br>
+    <input type="date" id="Tanggal_Beli">
+    <br>
+    
+
+    <label>Pembayaran : </label>
+    <br>
+    <div class="pembayaran-group">
+    <input type="radio" name="Pembayaran" value="Lunas">
+    Lunas
+    <input type="radio" name="Pembayaran" value="COD">
+    COD
+    <input type="radio" name="Pembayaran" value="DP">
+    DP <input type="number" id="nominal_DP" name="nominal_DP"
+    placeholder="Nominal DP">
+    <br>
+    </div>
+    
+
+    <label for="metode_pembayaran">Metode Pembayaran : </label>
+    <select id="metode_pembayaran">
+        <option value="Pilih">Pilih</option>
+        <option value="Tunai">Tunai</option>
+        <option value="Transfer">Transfer</option>
+        <option value="Qris">Qris</option>
+    </select>
+    <br>
+    
+    <label>Menu : </label>
+    <br>
+    <div class="menu-topokki">
+    <input type="checkbox" name="Menu" value="Topokki Original">
+    Original <input type="number" name="Jumlah Pesanan"
+    placeholder="Jumlah Pesanan">
+    </div>
+    <div class="menu-topokki">
+    <input type="checkbox" name="Menu" value="Topokki Mozza">
+    Mozza <input type="number" name="Jumlah Pesanan"
+    placeholder="Jumlah Pesanan">
+    </div>
+    <div class="menu-topokki">
+    <input type="checkbox" name="Menu" value="Topokki Carbonara">
+    Carbonara <input type="number" name="Jumlah Pesanan"
+    placeholder="Jumlah Pesanan">
+    </div>
+    <div class="menu-topokki">
+    <input type="checkbox" name="Menu" value="Topokki Rose">
+    Rose <input type="number" name="Jumlah Pesanan"
+    placeholder="Jumlah Pesanan">
+    </div>
+
+<div class="button-container">
+    <button type="reset">Clear</button>
+    <button type="submit">Send</button>
+</div>
+ </form>
+</div>
+</body>
+</html>
